@@ -27,11 +27,11 @@ def whatsapp_webhook():
 
     elif request.method == 'POST':
         
-        print("Primera Data: ", data)
-        
         
         if request.is_json:
             data = request.get_json()
+            
+            print(data)
             
             entry = get_message_event(data['entry'][0]['id'])
             
